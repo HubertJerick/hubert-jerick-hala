@@ -1,0 +1,89 @@
+ #=======================================
+#      SIMPLE STORE RECEIPT SYSTEM
+#=======================================
+
+print("=" * 40)
+print("SIMPLE STORE RECEIPT SYSTEM")
+print("=" * 40)
+
+# -----------------------------
+# Customer Information
+# -----------------------------
+customer_name = input("Enter Customer Name: ")
+contact_number = input("Enter Contact Number: ")
+address = input("Enter Address: ")
+
+# -----------------------------
+# Product 1
+# -----------------------------
+print("\n--- PRODUCT 1 ---")
+product1 = input("Enter Product 1 Name: ")
+price1 = float(input("Enter Price: "))
+qty1 = int(input("Enter Quantity: "))
+amount1 = price1 * qty1
+
+# -----------------------------
+# Product 2
+# -----------------------------
+print("\n--- PRODUCT 2 ---")
+product2 = input("Enter Product 2 Name: ")
+price2 = float(input("Enter Price: "))
+qty2 = int(input("Enter Quantity: "))
+amount2 = price2 * qty2
+
+# -----------------------------
+# Product 3
+# -----------------------------
+print("\n--- PRODUCT 3 ---")
+product3 = input("Enter Product 3 Name: ")
+price3 = float(input("Enter Price: "))
+qty3 = int(input("Enter Quantity: "))
+amount3 = price3 * qty3
+
+# -----------------------------
+# Discount
+# -----------------------------
+discount = float(input("\nEnter Discount (%): "))
+
+# -----------------------------
+# Calculations
+# -----------------------------
+subtotal = amount1 + amount2 + amount3
+discount_amount = subtotal * (discount / 100)
+total = subtotal - discount_amount
+
+print("\n" + "=" * 50)
+print("                 HUJE'S Store")
+print("=" * 50)
+
+#Receipt Output
+#-----------------------------
+print("\n" + "=" * 50)
+print("                 STORE RECEIPT")
+print("=" * 50)
+
+print(f"Customer Name : {customer_name}")
+print(f"Contact No.   : {contact_number}")
+print(f"Address       : {address}")
+
+print("-" * 50)
+print(f"{'Product':15}{'Price':>10}{'Qty':>8}{'Amount':>15}")
+print("-" * 50)
+
+print(f"{product1:15}{price1:>10.2f}{qty1:>8}{amount1:>15.2f}")
+print(f"{product2:15}{price2:>10.2f}{qty2:>8}{amount2:>15.2f}")
+print(f"{product3:15}{price3:>10.2f}{qty3:>8}{amount3:>15.2f}")
+
+print("-" * 50)
+print(f"{'Subtotal':33}{subtotal:>17.2f}")
+print(f"Discount ({discount:.0f}%):{discount_amount:>17.2f}")
+print("-" * 50)
+print(f"{'TOTAL':33}{total:>17.2f}")
+print("=" * 50)
+
+print("==================================")
+print("Thank you for your purchase!")
+print("=" * 50)
+
+print("Balik kayo laging fresh pninda ko.:p")
+print("=" * 50)
